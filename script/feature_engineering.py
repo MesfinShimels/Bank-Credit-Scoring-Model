@@ -85,4 +85,5 @@ def feature_engineering(df):
             df = df.merge(woe_iv['woe'], how='left', left_on=feature, right_index=True, suffixes=('', f'_WOE_{feature}'))
 
     print("Feature Engineering completed successfully!")
+    df.head(10)
     return df
